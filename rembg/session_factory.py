@@ -48,13 +48,13 @@ def new_session(model_name: str = "u2net") -> BaseSession:
     path = Path(u2net_home).expanduser()
     full_path = Path(u2net_home).expanduser() / fname
 
-    pooch.retrieve(
-        url,
-        f"md5:{md5}",
-        fname=fname,
-        path=Path(u2net_home).expanduser(),
-        progressbar=True,
-    )
+    # pooch.retrieve(
+    #     url,
+    #     f"md5:{md5}",
+    #     fname=fname,
+    #     path=Path(u2net_home).expanduser(),
+    #     progressbar=True,
+    # )
 
     sess_opts = ort.SessionOptions()
 
